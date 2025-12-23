@@ -3,6 +3,7 @@ using CompanyMS.Shared.Common;
 using CompanyMS.Shared.DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -67,5 +68,55 @@ namespace CompanyMS.Shared.App_CBL
             }
             return result;
         }
+        public DataTable Bindbranch()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constr))
+                {
+                    string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head from Branch_info where isnull(isDeleted,0)=0";
+                    using (SqlCommand cmd = new SqlCommand(str, conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                        //gvBranch.DataSource = dt;
+                        //gvBranch.DataBind();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            return dt;
+        }
+        public DataTable BindbranchHis()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constr))
+                {
+                    string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head from Branch_info where isnull(isDeleted,0)=1";
+                    using (SqlCommand cmd = new SqlCommand(str, conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+               // Response.Write(ex.Message);
+            }
+            return dt;
+        }
+
     }
 }
