@@ -171,11 +171,39 @@ namespace CompanyMS.Shared.App_CBL
             }
             return dt;
         }
+        public DataTable switchtoupdateview(string branch_kid)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head,branchdep_id from Branch_info where branch_kid = @branch_kid and isnull(isDeleted,0)=1";
+                using (SqlCommand cmd = new SqlCommand(str, con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    //DataTable dt = new DataTable();
+                    da.Fill(dt);
+                }
+            }
+            return dt;
 
-
-
-
-
+        }
+        public DataTable Switchtoupdateadd(string branch_kid)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head,branchdep_id from Branch_info where branch_kid = @branch_kid";
+                using (SqlCommand cmd = new SqlCommand(str, con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            return dt;
+        }
     }
-
 }
