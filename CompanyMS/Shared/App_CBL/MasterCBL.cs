@@ -14,14 +14,14 @@ namespace CompanyMS.Shared.App_CBL
     {
         string constr = string.Empty;
 
-        public MasterCBL() 
+        public MasterCBL()
         {
             DBconnections dbc = new DBconnections();
             constr = dbc.CMDB;
 
         }
 
-        public bool SaveorUpdate(MasterCBO masterCBO ,List<Employeeinfo> empList)
+        public bool SaveorUpdate(MasterCBO masterCBO, List<Employeeinfo> empList)
         {
             bool result = false;
             List<sqlparams> oListSqlParameter = new List<sqlparams>();
@@ -55,14 +55,14 @@ namespace CompanyMS.Shared.App_CBL
                         new SqlParameter("@emp_branch", empList[p].emp_branch),
                         new SqlParameter("@branch_kid", empList[p].branch_kid),
                         new SqlParameter("@mode", empList[p].mode)
-                                    
+
                         };
                     oListSqlParameter.Add(new sqlparams(_paraemp));
                     oListArrSPName.Add("SP_saveupdateemployee");
                 }
                 result = ModCommon.executesql(oListSqlParameter, oListArrSPName, constr);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
 
             }
@@ -90,7 +90,7 @@ namespace CompanyMS.Shared.App_CBL
             }
             catch (Exception ex)
             {
-                
+
             }
             return dt;
         }
@@ -113,10 +113,69 @@ namespace CompanyMS.Shared.App_CBL
             }
             catch (Exception ex)
             {
-               // Response.Write(ex.Message);
+                // Response.Write(ex.Message);
             }
             return dt;
         }
 
+        public DataTable Loademployeebybranchview(string branch_kid)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(constr))
+                {
+                    string str = "select emp_id,emp_name,emp_salary,emp_emailid,emp_gender,emp_branch,branch_id,branch_kid from Employeeinfo where branch_kid = @branch_kid and isnull(isDeleted,0)=1";
+                    using (SqlCommand cmd = new SqlCommand(str, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                //Response.Write(ex.Message);
+            }
+
+            return dt;
+
+        }
+        public DataTable Loadempbybranchadd(string branch_kid)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(constr))
+                {
+                    string str = "select emp_id,emp_name,emp_salary,emp_emailid,emp_gender,emp_branch,branch_id,branch_kid from Employeeinfo where branch_kid = @branch_kid and isnull(isDeleted,0)=0";
+                    using (SqlCommand cmd = new SqlCommand(str, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                //Response.Write(ex.Message);
+            }
+            return dt;
+        }
+
+
+
+
+
     }
+
 }

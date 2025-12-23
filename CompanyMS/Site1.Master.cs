@@ -87,8 +87,6 @@ namespace CompanyMS
             DataTable dt = new DataTable();
             try 
             {
-               
-
                 using (SqlConnection con = new SqlConnection(constr))
                 {
                     string str = "select m.Menuid,m.MenuText,m.NavigationUrl,m.perentid from tbl_Menu m inner join RoleMenu r on m.Menuid = r.Menuid where r.RoleId = @Roleid";

@@ -1,5 +1,3 @@
-D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.csproj.AssemblyReference.cache
-D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.csproj.CoreCompileInputs.cache
 D:\shivam\CompanyMS\CompanyMS\bin\CompanyMS.dll.config
 D:\shivam\CompanyMS\CompanyMS\bin\CompanyMS.dll
 D:\shivam\CompanyMS\CompanyMS\bin\CompanyMS.pdb
@@ -54,6 +52,8 @@ D:\shivam\CompanyMS\CompanyMS\bin\roslyn\VBCSCompiler.exe
 D:\shivam\CompanyMS\CompanyMS\bin\roslyn\VBCSCompiler.exe.config
 D:\shivam\CompanyMS\CompanyMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\shivam\CompanyMS\CompanyMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.csproj.AssemblyReference.cache
+D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.csproj.CoreCompileInputs.cache
 D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.csproj.Up2Date
 D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.dll
 D:\shivam\CompanyMS\CompanyMS\obj\Debug\CompanyMS.pdb

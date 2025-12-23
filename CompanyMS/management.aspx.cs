@@ -556,61 +556,22 @@ namespace CompanyMS
         {
             if (hdnFormMode.Value == "view")
             {
-                try
-                {
-                    using (SqlConnection con = new SqlConnection(constr))
-                    {
-                        string str = "select emp_id,emp_name,emp_salary,emp_emailid,emp_gender,emp_branch,branch_id,branch_kid from Employeeinfo where branch_kid = @branch_kid and isnull(isDeleted,0)=1";
-                        using (SqlCommand cmd = new SqlCommand(str, con))
-                        {
-                            cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-                            da.Fill(dt);
-                            gvEmployee.DataSource = dt;
-                            gvEmployee.DataBind();
+                MasterCBL mastercblview = new MasterCBL();
+                DataTable dtview = mastercblview.Loademployeebybranchview(branch_kid);
+                ViewState["EmployeeDT"] = dtview;
 
-                            ViewState["EmployeeDT"] = dt;
-
-                        }
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Response.Write(ex.Message);
-                }
-
+                gvEmployee.DataSource = dtview;
+                gvEmployee.DataBind();
 
             }
             else
             {
-                try
-                {
-                    using (SqlConnection con = new SqlConnection(constr))
-                    {
-                        string str = "select emp_id,emp_name,emp_salary,emp_emailid,emp_gender,emp_branch,branch_id,branch_kid from Employeeinfo where branch_kid = @branch_kid and isnull(isDeleted,0)=0";
-                        using (SqlCommand cmd = new SqlCommand(str, con))
-                        {
-                            cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-                            da.Fill(dt);
-                            gvEmployee.DataSource = dt;
-                            gvEmployee.DataBind();
+                MasterCBL mastercbladd = new MasterCBL();
+                DataTable dtadd = mastercbladd.Loadempbybranchadd(branch_kid);
+                ViewState["EmployeeDT"] = dtadd;
 
-                            ViewState["EmployeeDT"] = dt;
-
-                        }
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Response.Write(ex.Message);
-                }
+                gvEmployee.DataSource = dtadd;
+                gvEmployee.DataBind();
 
 
             }
@@ -892,8 +853,6 @@ namespace CompanyMS
                     issucess = DeleteBranch(selectedbranchid);
                     //issucessemp = DeleteEmployees(selectedbranchid);
                 }
-                //else{
-                //}
 
             }
 

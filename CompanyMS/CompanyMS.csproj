@@ -72,6 +72,7 @@
     <Content Include="Login.aspx" />
     <Content Include="management.aspx" />
     <Content Include="Pages\Default.aspx" />
+    <Content Include="Services\MenuService.asmx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -101,6 +102,10 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MenuService.asmx.cs">
+      <DependentUpon>MenuService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Shared\App_CBL\MasterCBL.cs" />
     <Compile Include="Shared\App_CBO\MasterCBO.cs" />
     <Compile Include="Shared\App_CBO\MenuCBO.cs" />
@@ -133,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

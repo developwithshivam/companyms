@@ -11,8 +11,6 @@ namespace CompanyMS.Shared.App_CBO
 
         public string MenuName { get; set; }
 
-        public string MenuTitle { get; set; }
-
         public string NavigationalUrl  { get; set; }
     }
 }
