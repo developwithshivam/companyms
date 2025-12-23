@@ -584,33 +584,20 @@ namespace CompanyMS
             {
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(constr))
+                    MasterCBL objswitchview = new MasterCBL();
+                    DataTable dt = objswitchview.switchtoupdateview(branch_kid);
+
+                    if (dt.Rows.Count > 0)
                     {
-                        string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head,branchdep_id from Branch_info where branch_kid = @branch_kid and isnull(isDeleted,0)=1";
-                        using (SqlCommand cmd = new SqlCommand(str, con))
-                        {
-                            cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-                            da.Fill(dt);
+                        //ddlbranchname.SelectedItem.Text = dt.Rows[0]["branch_name"].ToString();
+                        //ddlbranchdep.SelectedItem.Text = dt.Rows[0]["branch_department"].ToString();
+                        ddlbranchname.SelectedValue = dt.Rows[0]["branch_id"].ToString();
+                        ddlbranchdep.SelectedValue = dt.Rows[0]["branchdep_id"].ToString();
+                        txtbranchhead.Text = dt.Rows[0]["branch_head"].ToString();
 
-                            if (dt.Rows.Count > 0)
-                            {
-                                //ddlbranchname.SelectedItem.Text = dt.Rows[0]["branch_name"].ToString();
-                                //ddlbranchdep.SelectedItem.Text = dt.Rows[0]["branch_department"].ToString();
-                                ddlbranchname.SelectedValue = dt.Rows[0]["branch_id"].ToString();
-                                ddlbranchdep.SelectedValue = dt.Rows[0]["branchdep_id"].ToString();
-                                txtbranchhead.Text = dt.Rows[0]["branch_head"].ToString();
-
-                            }
-
-                        }
                     }
 
                     Loademployeebybranch(branch_kid);
-
-
 
                     btnaddemp.Visible = false;
                     emppanel.Visible = false;
@@ -637,28 +624,17 @@ namespace CompanyMS
             {
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(constr))
+                    MasterCBL objadd = new MasterCBL();
+                    DataTable dt = objadd.Switchtoupdateadd(branch_kid);
+
+                    if (dt.Rows.Count > 0)
                     {
-                        string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head,branchdep_id from Branch_info where branch_kid = @branch_kid";
-                        using (SqlCommand cmd = new SqlCommand(str, con))
-                        {
-                            cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@branch_kid", branch_kid);
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-                            da.Fill(dt);
+                        //ddlbranchname.SelectedItem.Text = dt.Rows[0]["branch_name"].ToString();
+                        //ddlbranchdep.SelectedItem.Text = dt.Rows[0]["branch_department"].ToString();
+                        ddlbranchname.SelectedValue = dt.Rows[0]["branch_id"].ToString();
+                        ddlbranchdep.SelectedValue = dt.Rows[0]["branchdep_id"].ToString();
+                        txtbranchhead.Text = dt.Rows[0]["branch_head"].ToString();
 
-                            if (dt.Rows.Count > 0)
-                            {
-                                //ddlbranchname.SelectedItem.Text = dt.Rows[0]["branch_name"].ToString();
-                                //ddlbranchdep.SelectedItem.Text = dt.Rows[0]["branch_department"].ToString();
-                                ddlbranchname.SelectedValue = dt.Rows[0]["branch_id"].ToString();
-                                ddlbranchdep.SelectedValue = dt.Rows[0]["branchdep_id"].ToString();
-                                txtbranchhead.Text = dt.Rows[0]["branch_head"].ToString();
-
-                            }
-
-                        }
                     }
 
                     Loademployeebybranch(branch_kid);
@@ -864,7 +840,7 @@ namespace CompanyMS
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "delete", script, true);
                 BindbranchHis();
             }
-            
+
             else
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucessfailed", "alert('Selected Branch  Deleted failed')", true);

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\shivam\\CompanyMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -46,11 +46,39 @@
       "DocumentGroups": [
         {
           "DockedHeight": 293,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f6c90d9a-1aa8-32e5-baac-467b7262213c}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{33c88fe3-43b3-374e-9aac-c4679036dce0}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{228e1580-0ef9-329a-bf07-81ebc3dcbf7e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
@@ -132,13 +160,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "management.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx.cs",
               "RelativeToolTip": "CompanyMS\\management.aspx.cs",
-              "ViewState": "AgIAACICAAAAfGZmZmYkwDkCAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAANEDAAAAAKKZmZnJvzoCAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:11:35.006Z",
               "EditorCaption": ""
@@ -158,44 +186,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MasterCBL.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "RelativeToolTip": "CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
-              "ViewState": "AgIAAHcAAAAAmJmZmZn5v4YAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAmpmZmZkRwFsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:04:14.958Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{f6c90d9a-1aa8-32e5-baac-467b7262213c}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{33c88fe3-43b3-374e-9aac-c4679036dce0}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{228e1580-0ef9-329a-bf07-81ebc3dcbf7e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }
