@@ -203,8 +203,6 @@ namespace CompanyMS
                         cbomaster.branch_kid = Guid.NewGuid();
                         cbomaster.mode = 0;
 
-                        //List<Employeeinfo> employee = (List<Employeeinfo>)ViewState["EMPLOYEE"];
-
                         foreach (DataRow dr in dt.Rows)
                         {
                             dr["branch_kid"] = cbomaster.branch_kid.ToString();
@@ -318,7 +316,7 @@ namespace CompanyMS
 
             }
             else
-            { 
+            {
 
                 gvEmployee.EditIndex = e.NewEditIndex;
                 //BindEmployeeGridFromViewState();
@@ -538,60 +536,25 @@ namespace CompanyMS
 
         private void Bindbranch()
         {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(constr))
-                {
-                    string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head from Branch_info where isnull(isDeleted,0)=0";
-                    using (SqlCommand cmd = new SqlCommand(str, conn))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-                        gvBranch.DataSource = dt;
-                        gvBranch.DataBind();
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.Message);
-            }
+            MasterCBL mastercbl = new MasterCBL();
+            DataTable dt = mastercbl.Bindbranch();
+            gvBranch.DataSource = dt;
+            gvBranch.DataBind();
 
         }
 
         private void BindbranchHis()
         {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(constr))
-                {
-                    string str = "select branch_kid,branch_id,branch_name,branch_department,branch_head from Branch_info where isnull(isDeleted,0)=1";
-                    using (SqlCommand cmd = new SqlCommand(str, conn))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-                        gvHistory.DataSource = dt;
-                        gvHistory.DataBind();
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.Message);
-            }
-
+            MasterCBL mastercbl = new MasterCBL();
+            DataTable dt = mastercbl.BindbranchHis();
+            gvHistory.DataSource = dt;
+            gvHistory.DataBind();
         }
 
 
         private void Loademployeebybranch(string branch_kid)
         {
-            if(hdnFormMode.Value == "view")
+            if (hdnFormMode.Value == "view")
             {
                 try
                 {
@@ -709,7 +672,7 @@ namespace CompanyMS
                 }
 
             }
-            else 
+            else
             {
                 try
                 {
@@ -871,10 +834,10 @@ namespace CompanyMS
         private bool IsEmailPresent(string email)
         {
             string emailToCheck = email.Trim().ToLower();
-            if (hdnFormMode.Value=="add")
+            if (hdnFormMode.Value == "add")
             {
                 if (string.IsNullOrEmpty(email)) return false;
-               
+
 
 
                 DataTable dtadd = ViewState["dt"] as DataTable;
@@ -885,7 +848,7 @@ namespace CompanyMS
                         string exitingEmail = row["emp_emailid"].ToString().Trim().ToLower();
                         if (exitingEmail == emailToCheck) return true;
                     }
-                   
+
                 }
 
             }
@@ -903,7 +866,7 @@ namespace CompanyMS
                 }
             }
             // 3) Check GridView rows (if the email is displayed in GridView)
-            
+
 
             return false;
 
@@ -912,7 +875,7 @@ namespace CompanyMS
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-           Response.Redirect(Request.RawUrl, true);
+            Response.Redirect(Request.RawUrl, true);
         }
 
         protected void btndelete_Click(object sender, EventArgs e)
@@ -926,32 +889,29 @@ namespace CompanyMS
                 if (chk != null && chk.Checked)
                 {
                     Guid selectedbranchid = (Guid)gvBranch.DataKeys[row.RowIndex].Value;
-                     issucess = DeleteBranch(selectedbranchid);
+                    issucess = DeleteBranch(selectedbranchid);
                     //issucessemp = DeleteEmployees(selectedbranchid);
                 }
-                //else
-                //{
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucessfailed", "alert('Please Select Branch to Delete')", true);
-                //    string script = "openTab('tabView','this')";
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "delete", script, true);
-                //    return;
+                //else{
                 //}
 
             }
-           
+
             Bindbranch();
             if (issucess == true || issucessemp == true)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucess", "alert('Selected Branch  Deleted')", true);
                 string script = "openTab('tabView','this')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "delete", script, true);
+                BindbranchHis();
             }
+            
             else
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucessfailed", "alert('Selected Branch  Deleted failed')", true);
 
             }
-         
+
 
 
         }
@@ -959,9 +919,9 @@ namespace CompanyMS
         {
             int isresult = 0;
             bool issucess = false;
-            try 
+            try
             {
-                
+
                 using (SqlConnection con = new SqlConnection(constr))
                 {
                     SqlCommand cmd = new SqlCommand("SP_saveupdateemployee", con);
@@ -983,10 +943,10 @@ namespace CompanyMS
 
                     //}
                 }
-                
+
             }
-            
-            catch (Exception ex) 
+
+            catch (Exception ex)
             {
                 string msg = ex.Message;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "exception", msg, true);
@@ -1006,8 +966,8 @@ namespace CompanyMS
                 cmd.Parameters.AddWithValue("@branch_kid", branchkId);
 
                 con.Open();
-                isresult =  cmd.ExecuteNonQuery();
-                issucess=isresult > -1 ? true :false;
+                isresult = cmd.ExecuteNonQuery();
+                issucess = isresult > -1 ? true : false;
             }
             DeleteEmployees(branchkId);
             return issucess;
@@ -1023,10 +983,10 @@ namespace CompanyMS
                 if (chk != null && chk.Checked)
                 {
                     selectedbranchid = gvHistory.DataKeys[row.RowIndex].Value.ToString().Trim();
-                    gvEmployee.Columns[gvEmployee.Columns.Count-1].Visible = false;
+                    gvEmployee.Columns[gvEmployee.Columns.Count - 1].Visible = false;
                     break;
                 }
- 
+
 
             }
             SwitchToUpdatePanel(selectedbranchid);
@@ -1039,9 +999,9 @@ namespace CompanyMS
 
             GvDeleteEmployees(id);
         }
-        private void GvDeleteEmployees(Guid id) 
+        private void GvDeleteEmployees(Guid id)
         {
-            if(hdnFormMode.Value == "update")
+            if (hdnFormMode.Value == "update")
             {
                 using (SqlConnection conn = new SqlConnection(constr))
                 {
