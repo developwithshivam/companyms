@@ -9,8 +9,11 @@ namespace CompanyMS.Shared.App_CBO
     public class MasterCBO
     {
         public MasterCBO() { }
+
         public Guid branch_kid { get; set; }
+
         public  string branch_id { get; set; }
+
         public string branch_name { get; set; }
 
         public string branch_department { get; set; }
@@ -18,6 +21,7 @@ namespace CompanyMS.Shared.App_CBO
         public string branch_head { get; set; }
 
         public string branchdep_id { get; set; }
+
         public int mode { get; set; }
     }
 

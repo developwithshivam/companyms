@@ -1,4 +1,5 @@
 ﻿using CompanyMS.Shared.Common;
+using CompanyMS.WebReferenceCms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,13 +20,21 @@ namespace CompanyMS
             DBconnection();
             if (!IsPostBack)
             {
-                if (Session["RoleId"] != null)
+            }
+            DataTable dt = (DataTable)HttpContext.Current.Session["LoginInfo"];
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
                 {
-                    LoadMenu(Convert.ToInt32(Session["RoleId"]));
+                    ViewState["Roleid"] = Convert.ToInt32(dt.Rows[0]["RoleId"]);
+                    ViewState["userRes_id"] = Convert.ToInt32(dt.Rows[0]["userRes_id"]);
+
+                    int Roleid = Convert.ToInt32(dt.Rows[0]["RoleId"]);
+                    LoadMenu(Roleid);
+
 
                 }
-
-            }    
+            }
 
         }
         // inside CompanyMS.Site1 class
@@ -62,19 +71,23 @@ namespace CompanyMS
         {
             Session.Clear();
             Session.Abandon();
-
             Response.Redirect("~/Login.aspx");
-        }
+            }
+        
 
         private void LoadMenu(int RoleId)
         {
-            DataTable dt = GetMenuData(RoleId);
+
+            CmsWebService cms = new CmsWebService();
+            DataTable dt = cms.GetMenuData(RoleId);
             StringBuilder sb = new StringBuilder();
+            ActiveInfo actinfo = new ActiveInfo();
             //DataRow[] parents = dt.Select("Perentid=0");
             foreach (DataRow row in dt.Rows)
             {
+                string url = ResolveUrl("~/" + row["NavigationUrl"]);
                 sb.Append("<a href='").
-                    Append(row["NavigationUrl"]).
+                    Append(url).
                     Append("' class = 'menu-link'>").
                     Append("<span class = 'fa fa-angle-right menu-icon'></span>").
                     Append(row["MenuText"]).Append("</a>");
@@ -82,32 +95,32 @@ namespace CompanyMS
             LeftMenu.InnerHtml += sb.ToString();
         }
 
-        private DataTable GetMenuData(int RoleId) 
-        {
-            DataTable dt = new DataTable();
-            try 
-            {
-                using (SqlConnection con = new SqlConnection(constr))
-                {
-                    string str = "select m.Menuid,m.MenuText,m.NavigationUrl,m.perentid from tbl_Menu m inner join RoleMenu r on m.Menuid = r.Menuid where r.RoleId = @Roleid";
-                    using (SqlCommand cmd = new SqlCommand(str, con))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@RoleId", RoleId);
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(dt);
+        //private DataTable GetMenuData(int RoleId) 
+        //{
+        //    DataTable dt = new DataTable();
+        //    try 
+        //    {
+        //        using (SqlConnection con = new SqlConnection(constr))
+        //        {
+        //            string str = "select m.Menuid,m.MenuText,m.NavigationUrl,m.perentid from tbl_Menu m inner join RoleMenu r on m.Menuid = r.Menuid where r.RoleId = @Roleid";
+        //            using (SqlCommand cmd = new SqlCommand(str, con))
+        //            {
+        //                cmd.CommandType = CommandType.Text;
+        //                cmd.Parameters.AddWithValue("@RoleId", RoleId);
+        //                SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //                da.Fill(dt);
 
-                    }
+        //            }
                    
-                }
-            }
-            catch(Exception ex)  
-            {
-                Response.Write(ex.Message);
+        //        }
+        //    }
+        //    catch(Exception ex)  
+        //    {
+        //        Response.Write(ex.Message);
 
-            }
-            return dt;
-        }
+        //    }
+        //    return dt;
+        //}
 
         private void DBconnection()
         {

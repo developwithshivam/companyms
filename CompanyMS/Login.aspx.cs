@@ -1,11 +1,13 @@
 ﻿using CompanyMS.Shared.Common;
 using CompanyMS.Shared.DataLayer;
+using CompanyMS.WebReferenceCms;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -36,29 +38,47 @@ namespace CompanyMS
             string username = txt_username.Text.Trim();
             string password = txt_password.Text.Trim();
 
-
-            DataRow row = ModCommon.Validteuser(username, password, constr);
-            if (row != null) 
+            CmsWebService cms = new CmsWebService();
+            DataTable dt = cms.ValidateUser(username, password);
+            //DataRow row = dt.NewRow();
+            //ModCommon.Validteuser(username, password, constr);
+            if (dt != null)
             {
-                Session["username"] = row["username"].ToString();
-                Session["RoleId"] =Convert.ToInt32(row["RoleId"]);
-                Session["userRes_id"] =Convert.ToInt32(row["userRes_id"]); 
+                if (dt.Rows.Count > 0)
+                {
+                    ViewState["username"] = Convert.ToString(dt.Rows[0]["username"]);
+                    ViewState["RoleId"] = Convert.ToInt32(dt.Rows[0]["RoleId"]);
+                    ViewState["userRes_id"] = Convert.ToInt32(dt.Rows[0]["userRes_id"]);
 
+                }
                 // Login successful
                 //  FormsAuthentication.RedirectFromLoginPage(username, false);
-                string script = "alert('welcome!')";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "successloginpage", script, true);
+                //string script = "alert('welcome!')";
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "successloginpage", script, true);
 
-                if (Session["RoleId"].ToString()!="1")
+                bool success = Createlogininfo();
+                ActiveInfo activeInfo = new ActiveInfo();
+                if (success)
                 {
-                    Response.Redirect("Pages/Default.aspx");
+                    if (ViewState["RoleId"].ToString() != "1")
+                    {
+                       
+
+                        Response.Redirect(ResolveUrl("~/Pages/Default.aspx"));
+
+                    }
+                    else
+                    {
+                       
+                        Response.Redirect(ResolveUrl("~/management.aspx"));
+                    }
 
                 }
                 else
                 {
-                    Response.Redirect("management.aspx");
 
                 }
+
 
             }
             else
@@ -131,8 +151,54 @@ namespace CompanyMS
 
             }
 
+        }
+        public bool Createlogininfo()
+        {
+            bool success = false;
+            DataTable dtLoginInfo = new DataTable();
+            dtLoginInfo.Columns.Add("username", typeof(string));
+            dtLoginInfo.Columns.Add("userRes_id", typeof(string));
+            dtLoginInfo.Columns.Add("RoleId", typeof(string));
+
+            DataRow dr = dtLoginInfo.NewRow();
+            dr["username"] = Convert.ToString(ViewState["username"]);
+            dr["userRes_id"] = Convert.ToString(ViewState["userRes_id"]);
+            dr["RoleId"] = Convert.ToString(ViewState["RoleId"]);
 
 
+            dtLoginInfo.Rows.Add(dr);
+            dtLoginInfo.AcceptChanges();
+            string userResid = Convert.ToString(dtLoginInfo.Rows[0]["userRes_id"]);
+            HttpContext.Current.Session["LoginInfo"] = dtLoginInfo;
+            string qry = "select IsLoggedIn,IsLoggedOut from tbl_userRegistration where userRes_id = '" + userResid + "'";
+            DataTable dtu = ModCommon.ReturnDataTable(qry, constr);
+            if (dtu != null)
+            {
+                if (dtu.Rows.Count > 0)
+                {
+                    if (Convert.ToBoolean(dtu.Rows[0]["IsLoggedOut"]) == false)
+                    {
+                        string SessionId = string.Empty;
+                        SessionId = HttpContext.Current.Session.SessionID;
+
+                        string str = "update tbl_userRegistration set IsLoggedIn=1 , IsLoggedOut=0,User_sessionId = '" + SessionId + "' where userRes_id = '" + userResid + "'";
+                        using (SqlConnection con = new SqlConnection(constr))
+                        {
+                            using (SqlCommand cmd = new SqlCommand(str, con))
+                            {
+                                cmd.CommandType = CommandType.Text;
+                                con.Open();
+                                int result = cmd.ExecuteNonQuery();
+                                success = result > -1 ? true : false;
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+            return success;
         }
     }
 }

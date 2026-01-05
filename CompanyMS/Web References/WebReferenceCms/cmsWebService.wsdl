@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SaveorUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masterCBO" type="tns:MasterCBO" />
+            <s:element minOccurs="0" maxOccurs="1" name="empList" type="tns:ArrayOfEmployeeinfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MasterCBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="branch_kid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_head" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branchdep_id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmployeeinfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Employeeinfo" nillable="true" type="tns:Employeeinfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Employeeinfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="emp_id" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_salary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_emailid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_branch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branch_kid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveorUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveorUpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bindbranch">
+        <s:complexType />
+      </s:element>
+      <s:element name="BindbranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindbranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindbranchHis">
+        <s:complexType />
+      </s:element>
+      <s:element name="BindbranchHisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindbranchHisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Loademployeebybranchview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch_kid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoademployeebybranchviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoademployeebybranchviewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Loadempbybranchadd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch_kid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadempbybranchaddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadempbybranchaddResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="switchtoupdateview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch_kid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="switchtoupdateviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="switchtoupdateviewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Switchtoupdateadd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch_kid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwitchtoupdateaddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SwitchtoupdateaddResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RoleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveorUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveorUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SaveorUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveorUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindbranchSoapIn">
+    <wsdl:part name="parameters" element="tns:Bindbranch" />
+  </wsdl:message>
+  <wsdl:message name="BindbranchSoapOut">
+    <wsdl:part name="parameters" element="tns:BindbranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindbranchHisSoapIn">
+    <wsdl:part name="parameters" element="tns:BindbranchHis" />
+  </wsdl:message>
+  <wsdl:message name="BindbranchHisSoapOut">
+    <wsdl:part name="parameters" element="tns:BindbranchHisResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoademployeebybranchviewSoapIn">
+    <wsdl:part name="parameters" element="tns:Loademployeebybranchview" />
+  </wsdl:message>
+  <wsdl:message name="LoademployeebybranchviewSoapOut">
+    <wsdl:part name="parameters" element="tns:LoademployeebybranchviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadempbybranchaddSoapIn">
+    <wsdl:part name="parameters" element="tns:Loadempbybranchadd" />
+  </wsdl:message>
+  <wsdl:message name="LoadempbybranchaddSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadempbybranchaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="switchtoupdateviewSoapIn">
+    <wsdl:part name="parameters" element="tns:switchtoupdateview" />
+  </wsdl:message>
+  <wsdl:message name="switchtoupdateviewSoapOut">
+    <wsdl:part name="parameters" element="tns:switchtoupdateviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="SwitchtoupdateaddSoapIn">
+    <wsdl:part name="parameters" element="tns:Switchtoupdateadd" />
+  </wsdl:message>
+  <wsdl:message name="SwitchtoupdateaddSoapOut">
+    <wsdl:part name="parameters" element="tns:SwitchtoupdateaddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuData" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CmsWebServiceSoap">
+    <wsdl:operation name="SaveorUpdate">
+      <wsdl:input message="tns:SaveorUpdateSoapIn" />
+      <wsdl:output message="tns:SaveorUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bindbranch">
+      <wsdl:input message="tns:BindbranchSoapIn" />
+      <wsdl:output message="tns:BindbranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindbranchHis">
+      <wsdl:input message="tns:BindbranchHisSoapIn" />
+      <wsdl:output message="tns:BindbranchHisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Loademployeebybranchview">
+      <wsdl:input message="tns:LoademployeebybranchviewSoapIn" />
+      <wsdl:output message="tns:LoademployeebybranchviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Loadempbybranchadd">
+      <wsdl:input message="tns:LoadempbybranchaddSoapIn" />
+      <wsdl:output message="tns:LoadempbybranchaddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="switchtoupdateview">
+      <wsdl:input message="tns:switchtoupdateviewSoapIn" />
+      <wsdl:output message="tns:switchtoupdateviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Switchtoupdateadd">
+      <wsdl:input message="tns:SwitchtoupdateaddSoapIn" />
+      <wsdl:output message="tns:SwitchtoupdateaddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuData">
+      <wsdl:input message="tns:GetMenuDataSoapIn" />
+      <wsdl:output message="tns:GetMenuDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CmsWebServiceSoap" type="tns:CmsWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveorUpdate">
+      <soap:operation soapAction="http://tempuri.org/SaveorUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bindbranch">
+      <soap:operation soapAction="http://tempuri.org/Bindbranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindbranchHis">
+      <soap:operation soapAction="http://tempuri.org/BindbranchHis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loademployeebybranchview">
+      <soap:operation soapAction="http://tempuri.org/Loademployeebybranchview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loadempbybranchadd">
+      <soap:operation soapAction="http://tempuri.org/Loadempbybranchadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="switchtoupdateview">
+      <soap:operation soapAction="http://tempuri.org/switchtoupdateview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Switchtoupdateadd">
+      <soap:operation soapAction="http://tempuri.org/Switchtoupdateadd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuData">
+      <soap:operation soapAction="http://tempuri.org/GetMenuData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CmsWebServiceSoap12" type="tns:CmsWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveorUpdate">
+      <soap12:operation soapAction="http://tempuri.org/SaveorUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bindbranch">
+      <soap12:operation soapAction="http://tempuri.org/Bindbranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindbranchHis">
+      <soap12:operation soapAction="http://tempuri.org/BindbranchHis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loademployeebybranchview">
+      <soap12:operation soapAction="http://tempuri.org/Loademployeebybranchview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Loadempbybranchadd">
+      <soap12:operation soapAction="http://tempuri.org/Loadempbybranchadd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="switchtoupdateview">
+      <soap12:operation soapAction="http://tempuri.org/switchtoupdateview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Switchtoupdateadd">
+      <soap12:operation soapAction="http://tempuri.org/Switchtoupdateadd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuData">
+      <soap12:operation soapAction="http://tempuri.org/GetMenuData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap12:operation soapAction="http://tempuri.org/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CmsWebService">
+    <wsdl:port name="CmsWebServiceSoap" binding="tns:CmsWebServiceSoap">
+      <soap:address location="http://192.168.0.106/MyWebServices/Controllers/cmsWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CmsWebServiceSoap12" binding="tns:CmsWebServiceSoap12">
+      <soap12:address location="http://192.168.0.106/MyWebServices/Controllers/cmsWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

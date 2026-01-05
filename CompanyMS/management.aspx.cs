@@ -1,13 +1,15 @@
-﻿using CompanyMS.Shared.App_CBL;
-using CompanyMS.Shared.App_CBO;
+﻿//using CompanyMS.Shared.App_CBL;
+//using CompanyMS.Shared.App_CBO;
 using CompanyMS.Shared.Common;
 using CompanyMS.Shared.DataLayer;
+using CompanyMS.WebReferenceCms;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -25,12 +27,13 @@ namespace CompanyMS
             {
                 DBconnections dbc = new DBconnections();
                 constr = dbc.CMDB;
-                if (Session["RoleId"] == null)
-                {
-                    Response.Redirect("Login.aspx");
-                }
+                //if (HttpContext.Current.Session==null || HttpContext.Current.Session["RoleId"] == null|| Convert.ToInt32(Session["RoleID"]) != 1 ||HttpContext.Current.Session["userRes_id"]==null)
+                //{
+                //   HttpContext.Current.Response.Redirect("~/Login.aspx?error=Session Time Out",false);
+                //}
                 if (!IsPostBack)
                 {
+                    ActiveInfo actinfo = new ActiveInfo();
                     Filldropdown();
                     CreateEmpGrid();
                     BindEmployeeGrid();
@@ -89,6 +92,7 @@ namespace CompanyMS
 
         protected void btnaddemp_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
             try
             {
                 string emp_name = txtempname.Text.Trim();
@@ -182,6 +186,8 @@ namespace CompanyMS
 
         protected void btnsaveall_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
+
             try
             {
                 if (hdnFormMode.Value == "add")
@@ -194,7 +200,7 @@ namespace CompanyMS
                     else
                     {
                         DataTable dt = ViewState["dt"] as DataTable;
-                        MasterCBO cbomaster = new MasterCBO();
+                        MasterCBO  cbomaster = new MasterCBO();
                         cbomaster.branch_id = ddlbranchname.SelectedValue;
                         cbomaster.branchdep_id = ddlbranchdep.SelectedValue;
                         cbomaster.branch_name = ddlbranchname.SelectedItem.Text;
@@ -227,8 +233,10 @@ namespace CompanyMS
 
                             empList.Add(emp);
                         }
-                        MasterCBL objcbl = new MasterCBL();
-                        bool status = objcbl.SaveorUpdate(cbomaster, empList);
+                        CmsWebService cms  = new CmsWebService();
+                        bool status = cms.SaveorUpdate(cbomaster, empList.ToArray());
+                        //MasterCBL objcbl = new MasterCBL();
+                        //bool status = objcbl.SaveorUpdate(cbomaster, empList);
 
                         if (status)
                         {
@@ -495,6 +503,8 @@ namespace CompanyMS
 
         protected void btneditbranch_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
+
             try
             {
                 string selectedbranchid = "";
@@ -536,7 +546,7 @@ namespace CompanyMS
 
         private void Bindbranch()
         {
-            MasterCBL mastercbl = new MasterCBL();
+            CmsWebService mastercbl = new CmsWebService();
             DataTable dt = mastercbl.Bindbranch();
             gvBranch.DataSource = dt;
             gvBranch.DataBind();
@@ -545,7 +555,7 @@ namespace CompanyMS
 
         private void BindbranchHis()
         {
-            MasterCBL mastercbl = new MasterCBL();
+            CmsWebService mastercbl = new CmsWebService();
             DataTable dt = mastercbl.BindbranchHis();
             gvHistory.DataSource = dt;
             gvHistory.DataBind();
@@ -556,7 +566,7 @@ namespace CompanyMS
         {
             if (hdnFormMode.Value == "view")
             {
-                MasterCBL mastercblview = new MasterCBL();
+                CmsWebService mastercblview = new CmsWebService();
                 DataTable dtview = mastercblview.Loademployeebybranchview(branch_kid);
                 ViewState["EmployeeDT"] = dtview;
 
@@ -566,7 +576,7 @@ namespace CompanyMS
             }
             else
             {
-                MasterCBL mastercbladd = new MasterCBL();
+                CmsWebService mastercbladd = new CmsWebService();
                 DataTable dtadd = mastercbladd.Loadempbybranchadd(branch_kid);
                 ViewState["EmployeeDT"] = dtadd;
 
@@ -584,7 +594,7 @@ namespace CompanyMS
             {
                 try
                 {
-                    MasterCBL objswitchview = new MasterCBL();
+                    CmsWebService objswitchview = new CmsWebService();
                     DataTable dt = objswitchview.switchtoupdateview(branch_kid);
 
                     if (dt.Rows.Count > 0)
@@ -624,7 +634,7 @@ namespace CompanyMS
             {
                 try
                 {
-                    MasterCBL objadd = new MasterCBL();
+                    CmsWebService objadd = new CmsWebService();
                     DataTable dt = objadd.Switchtoupdateadd(branch_kid);
 
                     if (dt.Rows.Count > 0)
@@ -680,6 +690,8 @@ namespace CompanyMS
 
         protected void btnupdateall_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
+
             try
             {
                 DataTable dt = ViewState["EmployeeDT"] as DataTable;
@@ -735,8 +747,8 @@ namespace CompanyMS
 
                     empList.Add(emp);
                 }
-                MasterCBL objcbl = new MasterCBL();
-                bool status = objcbl.SaveorUpdate(upcbo, empList);
+                CmsWebService objcbl = new CmsWebService();
+                bool status = objcbl.SaveorUpdate(upcbo, empList.ToArray());
                 if (status)
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alertMessage", "alert('record updated saved');", true);
@@ -812,11 +824,14 @@ namespace CompanyMS
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
+
             Response.Redirect(Request.RawUrl, true);
         }
 
         protected void btndelete_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
             bool issucess = false;
             bool issucessemp = false;
             //string selectedbranchid = "";
@@ -829,8 +844,9 @@ namespace CompanyMS
                     issucess = DeleteBranch(selectedbranchid);
                     //issucessemp = DeleteEmployees(selectedbranchid);
                 }
-
+                
             }
+
 
             Bindbranch();
             if (issucess == true || issucessemp == true)
@@ -843,7 +859,9 @@ namespace CompanyMS
 
             else
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucessfailed", "alert('Selected Branch  Deleted failed')", true);
+                string script = "openTab('tabView')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "delsucessfailed", "alert('Selected Branch Deleted failed! Please select branch')", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "selectbranch",script, true);
 
             }
 
@@ -851,7 +869,7 @@ namespace CompanyMS
 
         }
         private bool DeleteEmployees(Guid branchkId)
-        {
+        { 
             int isresult = 0;
             bool issucess = false;
             try
@@ -910,6 +928,8 @@ namespace CompanyMS
 
         protected void btnview_Click(object sender, EventArgs e)
         {
+            ActiveInfo actinfo = new ActiveInfo();
+
             hdnFormMode.Value = "view";
             string selectedbranchid = "";
             foreach (GridViewRow row in gvHistory.Rows)

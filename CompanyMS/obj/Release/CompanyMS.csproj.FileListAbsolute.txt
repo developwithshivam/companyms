@@ -57,3 +57,5 @@ D:\shivam\CompanyMS\CompanyMS\obj\Release\CompanyMS.csproj.CoreCompileInputs.cac
 D:\shivam\CompanyMS\CompanyMS\obj\Release\CompanyMS.csproj.Up2Date
 D:\shivam\CompanyMS\CompanyMS\obj\Release\CompanyMS.dll
 D:\shivam\CompanyMS\CompanyMS\obj\Release\CompanyMS.pdb
+D:\shivam\CompanyMS\CompanyMS\bin\CompanyMS.XmlSerializers.dll
+D:\shivam\CompanyMS\CompanyMS\obj\Release\CompanyMS.XmlSerializers.dll

@@ -72,8 +72,12 @@
     <Content Include="Login.aspx" />
     <Content Include="management.aspx" />
     <Content Include="Pages\Default.aspx" />
-    <Content Include="Services\MenuService.asmx" />
     <Content Include="UserRegistration.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReferenceCms\cmsWebService.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,13 +106,12 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\MenuService.asmx.cs">
-      <DependentUpon>MenuService.asmx</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Shared\App_CBL\MasterCBL.cs" />
-    <Compile Include="Shared\App_CBO\MasterCBO.cs" />
-    <Compile Include="Shared\App_CBO\MenuCBO.cs" />
+    <Compile Include="Shared\Common\ActiveInfo.cs" />
     <Compile Include="Shared\Common\DBconnections.cs" />
     <Compile Include="Shared\DataLayer\ModCommon.cs" />
     <Compile Include="Site1.Master.cs">
@@ -125,10 +128,20 @@
     <Compile Include="UserRegistration.aspx.designer.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WebReferenceCms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <None Include="Web References\WebReferenceCms\cmsWebService.wsdl" />
+    <None Include="Web References\WebReferenceCms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,6 +151,28 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="Shared\App_CBL\" />
+    <Folder Include="Shared\App_CBO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.0.106/MyWebServices/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReferenceCms\</RelPath>
+      <UpdateFromURL>http://192.168.0.106/MyWebServices/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CompanyMS_WebReferenceCms_CmsWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

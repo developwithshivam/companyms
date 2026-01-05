@@ -175,9 +175,8 @@
             padding: 12px;
             background: #e5e7eb;
             color: #333;
-            margin-top: 70px;
+            margin-top: auto;
             font-size: 14px;
-            position:page;bottom:0;width: 100%;
         }
 
 
@@ -220,7 +219,7 @@
         <!-- ------------------- MAIN LAYOUT ------------------- -->
         <div class="page-layout">
 
-      
+
             <!-- LEFT SIDEBAR -->
             <nav id="LeftMenu" runat="server" class="vertical-menu">
                 <h3 class="menu-title">MAIN MENU</h3>
@@ -238,7 +237,7 @@
 
         <div class="footer">
             © 2025 Company MS
-        </div>
+        </div>  
     </form>
 
 </body>

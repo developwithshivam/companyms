@@ -50,7 +50,7 @@
             width: 100%;
             background: #2563eb;
             color: #fff;
-            padding: 12px;
+            padding: 12px 12px;
             border: none;
             border-radius: 8px;
             font-size: 16px;
@@ -58,6 +58,7 @@
             cursor: pointer;
             transition: 0.3s;
             margin-top: 10px;
+            margin-left:10px;
         }
 
         .btn-primary-custom:hover {

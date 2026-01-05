@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 
 namespace CompanyMS.Shared.DataLayer
 {
-    public class ModCommon
+    public static class ModCommon
     {
 
         public static bool executesql(List<sqlparams> arrParams, List<string> strArr, string constr)
@@ -126,7 +126,6 @@ namespace CompanyMS.Shared.DataLayer
             try
             {
 
-
                 using (SqlConnection conn = new SqlConnection(constr))
                 {
                     string hashpassword = ModCommon.Hashpassword(password);
@@ -216,9 +215,6 @@ namespace CompanyMS.Shared.DataLayer
             bool exists = false;
             try
             {
-
-
-
                 using (SqlConnection conn = new SqlConnection(constr))
                 {
                     string str = "select count(*) from tbl_userRegistration where username = @username";
@@ -257,6 +253,42 @@ namespace CompanyMS.Shared.DataLayer
             }
             return checkcomfirmpass;
 
+        }
+
+        public static DataTable ReturnDataTable(string strQry, string constr) 
+        {
+            DataTable FunctionDatatable = default(DataTable);
+
+            try 
+            {
+                using (SqlConnection sqlcon = new SqlConnection(constr))
+                {
+                    using (SqlCommand sqlcmd = new SqlCommand(strQry, sqlcon))
+                    {
+                        SqlDataAdapter sqladapter = new SqlDataAdapter();
+
+                        DataSet sqldataset = new DataSet();
+
+                        DataTable sqldatatable = new DataTable();
+
+
+                        sqlcon.Open();
+
+                        sqladapter.SelectCommand = sqlcmd;
+
+                        sqladapter.Fill(sqldataset, "TableName");
+
+                        sqldatatable = sqldataset.Tables["TableName"];
+                        return sqldatatable;
+                    }
+                }
+
+            }
+            catch(Exception ex) 
+            {
+                string msg = ex.Message;
+            }
+            return FunctionDatatable;
         }
 
 

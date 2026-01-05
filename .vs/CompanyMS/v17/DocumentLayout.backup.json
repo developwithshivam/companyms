@@ -3,40 +3,64 @@
   "WorkspaceRootPath": "D:\\shivam\\CompanyMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\shared\\common\\activeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\common\\activeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\site1.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\site1.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\pages\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\pages\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\management.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\shared\\datalayer\\modcommon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\datalayer\\modcommon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\services\\menuservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\services\\menuservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\shared\\app_cbo\\mastercbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\app_cbo\\mastercbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\userregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\pages\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\pages\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\userregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\userregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\userregistration.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\userregistration.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\userregistration.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\shared\\app_cbo\\mastercbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\app_cbo\\mastercbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\app_cbl\\mastercbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,12 +70,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 293,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{f6c90d9a-1aa8-32e5-baac-467b7262213c}"
@@ -81,40 +101,18 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuService.asmx.cs",
-              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Services\\MenuService.asmx.cs",
-              "RelativeDocumentMoniker": "CompanyMS\\Services\\MenuService.asmx.cs",
-              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Services\\MenuService.asmx.cs",
-              "RelativeToolTip": "CompanyMS\\Services\\MenuService.asmx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T06:12:09.322Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MasterCBO.cs",
-              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
-              "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
-              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
-              "RelativeToolTip": "CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T06:11:53.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Login.aspx.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx.cs",
               "RelativeToolTip": "CompanyMS\\Login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAACAzszMzMwiwDsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:11:47.68Z",
               "EditorCaption": ""
@@ -122,41 +120,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx",
-              "RelativeDocumentMoniker": "CompanyMS\\Login.aspx",
-              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx",
-              "RelativeToolTip": "CompanyMS\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-23T06:11:45.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRegistration.aspx.cs",
-              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx.cs",
-              "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx.cs",
-              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx.cs",
-              "RelativeToolTip": "CompanyMS\\UserRegistration.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ModCommon.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
+              "RelativeToolTip": "CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
+              "ViewState": "AgIAAJ8AAAAA4MzMzMz8vxIBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T06:11:43.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRegistration.aspx",
-              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx",
-              "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx",
-              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx",
-              "RelativeToolTip": "CompanyMS\\UserRegistration.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-23T06:11:39.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T08:12:19.421Z"
             },
             {
               "$type": "Document",
@@ -166,14 +137,38 @@
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx.cs",
               "RelativeToolTip": "CompanyMS\\management.aspx.cs",
-              "ViewState": "AgIAANEDAAAAAKKZmZnJvzoCAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAADIZ2ZmZmYkwCIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:11:35.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Site1.Master.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\Site1.Master.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master.cs",
+              "RelativeToolTip": "CompanyMS\\Site1.Master.cs",
+              "ViewState": "AgIAADYAAADAmZmZmZk3wE4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T08:46:25.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\Pages\\Default.aspx.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx.cs",
+              "RelativeToolTip": "CompanyMS\\Pages\\Default.aspx.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAASwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T06:46:20.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "management.aspx",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx",
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx",
@@ -181,21 +176,117 @@
               "RelativeToolTip": "CompanyMS\\management.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-23T06:11:30.821Z",
+              "WhenOpened": "2025-12-23T06:11:30.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActiveInfo.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\Common\\ActiveInfo.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\Shared\\Common\\ActiveInfo.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\Common\\ActiveInfo.cs",
+              "RelativeToolTip": "CompanyMS\\Shared\\Common\\ActiveInfo.cs",
+              "ViewState": "AgIAAA8AAAAAyczMzMz8vxYAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T06:41:46.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "UserRegistration.aspx.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx.cs",
+              "RelativeToolTip": "CompanyMS\\UserRegistration.aspx.cs",
+              "ViewState": "AgIAABYAAABAAAAAAAAQwCMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T06:11:43.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRegistration.aspx",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx",
+              "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx",
+              "RelativeToolTip": "CompanyMS\\UserRegistration.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-23T06:11:39.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Site1.Master",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master",
+              "RelativeDocumentMoniker": "CompanyMS\\Site1.Master",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master",
+              "RelativeToolTip": "CompanyMS\\Site1.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-23T08:46:21.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx",
+              "RelativeDocumentMoniker": "CompanyMS\\Pages\\Default.aspx",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx",
+              "RelativeToolTip": "CompanyMS\\Pages\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-02T06:46:16.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MasterCBO.cs",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
+              "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
+              "RelativeToolTip": "CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:27:50.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx",
+              "RelativeDocumentMoniker": "CompanyMS\\Login.aspx",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx",
+              "RelativeToolTip": "CompanyMS\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-23T06:11:45.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Web.config",
+              "RelativeDocumentMoniker": "CompanyMS\\Web.config",
+              "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Web.config",
+              "RelativeToolTip": "CompanyMS\\Web.config",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-24T07:51:39.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "MasterCBL.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "RelativeToolTip": "CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
-              "ViewState": "AgIAACcAAAAAmpmZmZkRwFsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAMzMzMzMrwL8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T06:04:14.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T07:10:39.823Z"
             }
           ]
         }
