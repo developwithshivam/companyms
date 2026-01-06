@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\shared\\common\\activeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\shared\\common\\activeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|d:\\shivam\\companyms\\companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\management.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\site1.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -112,7 +112,7 @@
               "RelativeDocumentMoniker": "CompanyMS\\Login.aspx.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx.cs",
               "RelativeToolTip": "CompanyMS\\Login.aspx.cs",
-              "ViewState": "AgIAADcAAACAzszMzMwiwDsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAADg//////8owJoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:11:47.68Z",
               "EditorCaption": ""
@@ -131,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "management.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx.cs",
@@ -180,13 +180,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ActiveInfo.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\Common\\ActiveInfo.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\Common\\ActiveInfo.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\Common\\ActiveInfo.cs",
               "RelativeToolTip": "CompanyMS\\Shared\\Common\\ActiveInfo.cs",
-              "ViewState": "AgIAAA8AAAAAyczMzMz8vxYAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAACAMTMzMzMDwBYAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T06:41:46.374Z",
               "EditorCaption": ""

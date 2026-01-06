@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\shivam\\CompanyMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\shivam\\CompanyMS\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|D:\\shivam\\CompanyMS\\companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9661FBEC-9ABD-4A45-BAA3-A49509E3C4EF}|CompanyMS\\CompanyMS.csproj|solutionrelative:companyms\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -107,19 +111,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\shivam\\CompanyMS\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "D:\\shivam\\CompanyMS\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAB4AAABgZmZmZmYkwCcAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVEhLtZVdTsJAFIWroTyDK3ELJuCbsA1ZhQRFRETkV6yV8AAsgAI\u002BugW3wAr0RUop7Tj3dmagtLXFhJOc3mEynXu\u002BSWmlg4oQcsSGqOFwSKcIzAcY7rFZdeZkWf42DOMsl7v8ZNsEazAYEMuyXF5zr7nXWG3bJqPRiMznc6Kqb1\u002BtdueUbePSMasoSASiN0sW2AJbwrSRMKwBJZNJKZVOJeJx\u002BaPRbHma\u002BDbAqzOMpBPa5DydxiZsSijGKoo30MZjrH8pm81iVRQFKygmxxNs6K9\u002Bv4/nvlqZ1CticBuOl8IGWS4NogsviWmuSe2p7uH2EMAKTQsn2FUmkxUnEKher4dPjH9ymjogva47BNXHWhgBXCRpomnOxB6KRKCqKhJsznoneUD6BSOoPFSjEUwnByJQlFf8l7rTO6ndyalZcm7TNEn5vhJG4CD8h\u002BAikwkn6HZf8F3jSSu8OfNt/yx0sqIEpbtyOAGsmE4nzsQeikTQ7jwTkxKItCyxX2qenBsIirelcAJAmB2KoNlq4/Psl1Z4K/UuQeGmGIGA6n02xbqPgIBuwH4FqN5o4vMMKYOSBhkI8oVrTwfPBwdWxOQYWt7D/P5duT768D7HJhFtU9MBVj5XyF\u002B59jywJOkX7ucXnGOxDX8AAAAASUVORK5CYII=",
+              "WhenOpened": "2026-01-05T11:50:21.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Login.aspx.cs",
               "ToolTip": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx.cs",
               "RelativeToolTip": "CompanyMS\\Login.aspx.cs",
-              "ViewState": "AgIAAJMAAADg//////8owJoAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAZmZmZmYcwJoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T06:11:47.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ModCommon.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\DataLayer\\ModCommon.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "management.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx.cs",
@@ -144,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Site1.Master.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Site1.Master.cs",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Pages\\Default.aspx.cs",
@@ -168,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "management.aspx",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\management.aspx",
               "RelativeDocumentMoniker": "CompanyMS\\management.aspx",
@@ -180,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ActiveInfo.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\Common\\ActiveInfo.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\Common\\ActiveInfo.cs",
@@ -193,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserRegistration.aspx.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx.cs",
               "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx.cs",
@@ -205,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserRegistration.aspx",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\UserRegistration.aspx",
               "RelativeDocumentMoniker": "CompanyMS\\UserRegistration.aspx",
@@ -217,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Site1.Master",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Site1.Master",
               "RelativeDocumentMoniker": "CompanyMS\\Site1.Master",
@@ -229,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Default.aspx",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Pages\\Default.aspx",
               "RelativeDocumentMoniker": "CompanyMS\\Pages\\Default.aspx",
@@ -241,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MasterCBO.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBO\\MasterCBO.cs",
@@ -253,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Login.aspx",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Login.aspx",
               "RelativeDocumentMoniker": "CompanyMS\\Login.aspx",
@@ -265,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Web.config",
               "RelativeDocumentMoniker": "CompanyMS\\Web.config",
@@ -278,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "MasterCBL.cs",
               "DocumentMoniker": "D:\\shivam\\CompanyMS\\CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
               "RelativeDocumentMoniker": "CompanyMS\\Shared\\App_CBL\\MasterCBL.cs",
